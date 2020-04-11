@@ -1,9 +1,9 @@
-import React from 'react'
-import {render} from '@testing-library/react'
-import CalculatorDisplay from '../calculator-display'
+import React from 'react';
+import { render } from 'calculator-test-utils';
+import CalculatorDisplay from '../calculator-display';
 
 test('renders', () => {
-  const {container} = render(<CalculatorDisplay value="0" />)
+  const {container} = render(<CalculatorDisplay value="0" />);
   expect(container.firstChild).toMatchInlineSnapshot(`
     .emotion-0 {
       position: relative;
@@ -12,6 +12,8 @@ test('renders', () => {
       -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;
+      color: white;
+      background: #1c191c;
     }
 
     <div

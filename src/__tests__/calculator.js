@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from 'calculator-test-utils';
 import Calculator from '../calculator';
 
 test('the clear button switcher from AC to C when where is an entry', () => {
