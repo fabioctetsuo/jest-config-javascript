@@ -1,25 +1,15 @@
-const path = require('path');
+// const path = require('path');
 
 module.exports = {
+  ...require('./jest-common'),
   testEnvironment: 'jest-environment-jsdom',
-  moduleDirectories: [
-    'node_modules',
-    path.join(__dirname, 'src'),
-    'shared',
-    'test',
-  ],
-  moduleNameMapper: {
-    '\\.module\\.css': 'identity-obj-proxy',
-    '\\.css$': require.resolve('./test/test-style-mock.js')
-  },
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   snapshotSerializers: ['jest-emotion'],
-  collectCoverageFrom: ['**/src/**/*.js'],
   coverageThreshold: {
     global: {
       statements: 31,
       branches: 18,
-      functions: 32,
+      functions: 29,
       lines: 34,
     },
     './src/shared/utils': {
