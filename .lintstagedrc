@@ -1,0 +1,6 @@
+{
+  "**/*.+(js|json|css|html|md)": [
+    "prettier --write",
+    "jest --findRelatedTests",
+  ],
+}
