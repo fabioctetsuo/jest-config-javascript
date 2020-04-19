@@ -17,7 +17,7 @@ module.exports = {
   collectCoverageFrom: ['**/src/**/*.js'],
   coverageThreshold: {
     global: {
-      statements: 32,
+      statements: 31,
       branches: 18,
       functions: 32,
       lines: 34,
