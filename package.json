@@ -13,9 +13,14 @@
     "postbuild": "cp ./public/index.html ./dist/index.html",
     "start": "serve --no-clipboard --single --listen 8080 dist",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|css|html|md)\"",
-    "lint": "eslint --ignore-path .gitignore .",
-    "validate": "yarn run lint && yarn run test && yarn run build",
+    "lint": "jest --config test/jest.lint.js",
+    "validate": "yarn run test && yarn run build",
     "setup": "yarn install && yarn run validate"
+  },
+  "jest-runnner-eslint": {
+    "clipOptions": {
+      "ignorePath": "./.gitignore"
+    }
   },
   "keywords": [],
   "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",
@@ -39,6 +44,7 @@
     "identity-obj-proxy": "^3.0.0",
     "is-ci-cli": "^2.0.0",
     "jest-emotion": "^10.0.32",
+    "jest-runner-eslint": "^0.7.6",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "serve": "^11.2.0",
